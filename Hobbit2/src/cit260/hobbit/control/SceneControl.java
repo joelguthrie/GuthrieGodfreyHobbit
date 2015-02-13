@@ -10,6 +10,15 @@ package cit260.hobbit.control;
  * @author joel
  */
 public class SceneControl {
-
-    
+    public double ChangeLifePoints(double LifepointsLost, double CurrentLifePoints){
+        
+        double TotalLifePoints;
+        
+	if(CurrentLifePoints < 0)
+            return -1;
+        
+	TotalLifePoints = CurrentLifePoints - LifepointsLost;
+        
+    return TotalLifePoints;
+}
 }
