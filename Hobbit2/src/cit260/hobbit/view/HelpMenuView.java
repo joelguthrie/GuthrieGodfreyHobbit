@@ -5,23 +5,24 @@
  */
 package cit260.hobbit.view;
 
-import cit260.hobbit.control.GameControl;
-import hobbit2.Hobbit2;
 import java.util.Scanner;
 
 /**
  *
- * @author Bryant
+ * @author joel
  */
-public class MainMenuView {
+public class HelpMenuView {
+    
+
 
     private final String MENU = "\n"
         +                  "\n***************************************************"
-        +                  "\n* N - New Game                                    *"
-        +                  "\n* L - Load Saved Game                             *"
-        +                  "\n* S - Save Game                                   *"
-        +                  "\n* H - Help Menu                                   *"
-        +                  "\n* Q - Quit                                        *"
+        +                  "\n* G - Display the game Objective                  *"
+        +                  "\n* D - Directions on obtaining Gold                *"
+        +                  "\n* S - Directions on purchasing Supplies           *"
+        +                  "\n* T - Direction on Training                       *"
+        +                  "\n* F - How to fight the Dragon                     *"
+           +               "\n* Q - Quit the Help Menu                          *"
         +                  "\n***************************************************";
       
     public void displayMenu() {
@@ -60,50 +61,47 @@ public class MainMenuView {
     
     }
 
-    public void doAction(char choice) {
+    private void doAction(char choice) {
         switch (choice){
-            case 'N':
-                this.startNewGame();
+            case 'G':
+                this.displayObjective();
                 break;
-            case 'L':
-                this.startExistingGame();
-                break;
-            case 'H':
-                this.displayHelpMenu();
+            case 'D':
+                this.goldDirections();
                 break;
             case 'S':
-                this.saveGame();
+                this.suppliesDirections();
                 break;
+            case 'T':
+                this.trainingDirections();
+                break;
+            case 'F':
+                this.fightingDirections();
+                break;    
             case 'Q':
                 return;
             default:
                 System.out.println("\n **** Invalid Choice. Choose another ******");
                 break;
         }
-        }
-
-    private void startNewGame() {
-     GameControl.createNewGame(Hobbit2.getPlayer());
-     
-     GameMenuView gameMenu = new GameMenuView();
-     gameMenu.displayMenu();
-         }
-
-    private void startExistingGame() {
-  System.out.println("\n **** StartExistingGameFunction ******");
     }
 
-    private void displayHelpMenu() {
-     
-     HelpMenuView helpMenu = new HelpMenuView();
-     helpMenu.displayMenu();
+    private void displayObjective() {
+System.out.println("\n **** displayObjective stub called ******");  
     }
 
-    private void saveGame() {
-  System.out.println("\n **** SaveGameFunction ******");    
-    }
-    }
-   
-    
-    
+    private void goldDirections() {
+ System.out.println("\n **** goldDirections stub called ******");   }
 
+    private void suppliesDirections() {
+ System.out.println("\n **** supplies stub called ******");         
+    }
+
+    private void trainingDirections() {
+ System.out.println("\n **** taining stub called ******");  
+    }
+
+    private void fightingDirections() {
+System.out.println("\n **** fighting stub called ******");  
+    }
+}

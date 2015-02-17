@@ -10,5 +10,7 @@ package cit260.hobbit.view;
  * @author Bryant
  */
 class GameMenuView {
-    
+     public static void displayMenu() {
+        System.out.println("\n ***** displayMenu stub function was here *******");
+    }
 }

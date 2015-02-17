@@ -5,10 +5,19 @@
  */
 package cit260.hobbit.control;
 
+import cit260.hobbit.model.Player;
+
 /**
  *
  * @author joel
  */
 public class GameControl {
 
+    public static void createNewGame() {
+        System.out.println("\n ***** createnewgame stub function was here *******");
+    }
+
+    public static void createNewGame(Player player) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
