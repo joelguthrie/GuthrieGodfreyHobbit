@@ -22,6 +22,7 @@ public class HelpMenuView {
         +                  "\n* S - Directions on purchasing Supplies           *"
         +                  "\n* T - Direction on Training                       *"
         +                  "\n* F - How to fight the Dragon                     *"
+        +                  "\n* M - Satus Menu                                  *"
            +               "\n* Q - Quit the Help Menu                          *"
         +                  "\n***************************************************";
       
@@ -77,7 +78,10 @@ public class HelpMenuView {
                 break;
             case 'F':
                 this.fightingDirections();
-                break;    
+                break;  
+            case 'M':
+                this.StatusMenu();
+                break;  
             case 'Q':
                 return;
             default:
@@ -103,5 +107,10 @@ System.out.println("\n **** displayObjective stub called ******");
 
     private void fightingDirections() {
 System.out.println("\n **** fighting stub called ******");  
+    }
+
+    private void StatusMenu() {
+     StatusMenuVeiw statusMenu = new StatusMenuVeiw();
+     statusMenu.displayStatusMenu();
     }
 }

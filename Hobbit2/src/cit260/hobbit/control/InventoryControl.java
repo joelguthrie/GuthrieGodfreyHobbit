@@ -10,6 +10,7 @@ package cit260.hobbit.control;
  * @author joel
  */
 public class InventoryControl {
+   double gold = 0;
    
     public double ChangeExperience(double ExperienceValue, double CurrentExperience){
         
