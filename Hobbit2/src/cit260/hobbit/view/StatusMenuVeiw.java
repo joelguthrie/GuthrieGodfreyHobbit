@@ -12,17 +12,23 @@ import java.util.Scanner;
  * @author joel
  */
 public class StatusMenuVeiw {
-    double gold = 0;
+    Integer gold = 0;
+    Integer goldpouch = 0;
+    Integer attackExperience = 0;
+    Integer defenseExperience = 0;
+    Integer experienceMedallion = 0;
+    Integer sword = 0;
+    Integer armor = 0;
     
     private final String Status = "\n"
         +                  "\n***************************************************"
-        +                  "\n* Gold                                        /10 *"
-        +                  "\n* Gold Pouch                                   /1 *"    
-        +                  "\n* Attack Experince                            /10 *"
-        +                  "\n* Defense Experince                           /10 *"
-        +                  "\n* Experience Medallion                         /1 *"
-        +                  "\n* Sword                                        /1 *"
-        +                  "\n* Armor                                        /1 *"
+        +                  "\n* Gold                                       "+ gold + "/10 *"
+        +                  "\n* Gold Pouch                                  "+ goldpouch + "/1 *"    
+        +                  "\n* Attack Experince                           "+ attackExperience + "/10 *"
+        +                  "\n* Defense Experince                          "+ defenseExperience + "/10 *"
+        +                  "\n* Experience Medallion                        "+ experienceMedallion + "/1 *"
+        +                  "\n* Sword                                       "+ sword + "/1 *"
+        +                  "\n* Armor                                       "+ armor + "/1 *"
         +                  "\n*                                                 *"    
         +                  "\n* Q - Quit                                        *"
         +                  "\n***************************************************";

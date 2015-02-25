@@ -23,7 +23,9 @@ public class HelpMenuView {
         +                  "\n* T - Direction on Training                       *"
         +                  "\n* F - How to fight the Dragon                     *"
         +                  "\n* M - Satus Menu                                  *"
-           +               "\n* Q - Quit the Help Menu                          *"
+        +                  "\n* A - Addition Problem                            *"
+
+          +               "\n* Q - Quit the Help Menu                          *"
         +                  "\n***************************************************";
       
     public void displayMenu() {
@@ -82,6 +84,9 @@ public class HelpMenuView {
             case 'M':
                 this.StatusMenu();
                 break;  
+            case 'A':
+                this.AdditionProblem();
+                break;  
             case 'Q':
                 return;
             default:
@@ -112,5 +117,10 @@ System.out.println("\n **** fighting stub called ******");
     private void StatusMenu() {
      StatusMenuVeiw statusMenu = new StatusMenuVeiw();
      statusMenu.displayStatusMenu();
+    }
+
+    private void AdditionProblem() {
+      AskAdditionProblem additionProblem = new AskAdditionProblem();
+      additionProblem.displayAdditionProblem();
     }
 }
