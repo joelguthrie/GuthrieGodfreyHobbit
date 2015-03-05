@@ -32,7 +32,7 @@ public class HelpMenuView extends View {
     public boolean doAction(Object obj) {
     char value = (char) obj;
     
-    
+   value = Character.toUpperCase(value);
         switch (value){
            case 'G':
                 this.displayObjective();

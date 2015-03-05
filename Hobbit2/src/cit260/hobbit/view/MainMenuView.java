@@ -30,7 +30,7 @@ public class MainMenuView extends View {
     public boolean doAction(Object obj) {
     char value = (char) obj;
     
-    
+    value = Character.toUpperCase(value);
         switch (value){
             case 'N':
                 this.startNewGame();
