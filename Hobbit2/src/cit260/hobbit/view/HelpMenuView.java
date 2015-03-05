@@ -21,7 +21,7 @@ public class HelpMenuView extends View {
         +                  "\n* S - Directions on purchasing Supplies           *"
         +                  "\n* T - Direction on Training                       *"
         +                  "\n* F - How to fight the Dragon                     *"
-        +                  "\n* M - Satus Menu                                  *"
+        +                  "\n* M - Map                                  *"
         +                  "\n* A - Addition Problem                            *"
 
           +               "\n* Q - Quit the Help Menu                          *"
@@ -50,7 +50,7 @@ public class HelpMenuView extends View {
                 this.fightingDirections();
                 break;  
             case 'M':
-                this.StatusMenu();
+                this.mapLocation();
                 break;  
             case 'A':
                 this.AdditionProblem();
@@ -85,9 +85,9 @@ System.out.println("\n **** displayObjective stub called ******");
 System.out.println("\n **** fighting stub called ******");  
     }
 
-    private void StatusMenu() {
-     StatusMenuVeiw statusMenu = new StatusMenuVeiw();
-     statusMenu.displayStatusMenu();
+    private void mapLocation() {
+     MapLocationView mapLocation = new MapLocationView();
+     mapLocation.display();
     }
 
     private void AdditionProblem() {
