@@ -7,61 +7,31 @@ package cit260.hobbit.view;
 
 import cit260.hobbit.control.GameControl;
 import hobbit2.Hobbit2;
-import java.util.Scanner;
 
 /**
  *
  * @author Bryant
  */
-public class MainMenuView {
+public class MainMenuView extends View {
+    
+    public MainMenuView() {
 
-    private final String MENU = "\n"
+    super("\n"
         +                  "\n***************************************************"
         +                  "\n* N - New Game                                    *"
         +                  "\n* L - Load Saved Game                             *"
         +                  "\n* S - Save Game                                   *"
         +                  "\n* H - Help Menu                                   *"
         +                  "\n* Q - Quit                                        *"
-        +                  "\n***************************************************";
-      
-    public void displayMenu() {
-        char selection = ' ';
-        do {
-            System.out.println(MENU);
-            
-            String input = this.getInput();
-            selection = input.charAt(0);
-            
-            this.doAction(selection);
-        }
-        while (selection != 'Q');
-        
-        }
-
-    private String getInput() {
-            boolean valid = false; 
-            String choice = null;
-            Scanner keyboard = new Scanner(System.in);
-            
-            while(!valid) {
-            
-                System.out.println("What would you like to do?");
-                
-                choice = keyboard.nextLine();
-                choice = choice.trim();
-                
-                if (choice.length() >2) {
-                    continue;
-                }
-                break;
-        
-    }
-            return choice;
+        +                  "\n***************************************************");
+}
+ 
+    @Override
+    public boolean doAction(Object obj) {
+    char value = (char) obj;
     
-    }
-
-    public void doAction(char choice) {
-        switch (choice){
+    
+        switch (value){
             case 'N':
                 this.startNewGame();
                 break;
@@ -75,18 +45,19 @@ public class MainMenuView {
                 this.saveGame();
                 break;
             case 'Q':
-                return;
+                return false;
             default:
                 System.out.println("\n **** Invalid Choice. Choose another ******");
                 break;
         }
-        }
+        return false;
+    }
 
     private void startNewGame() {
      GameControl.createNewGame(Hobbit2.getPlayer());
      
      GameMenuView gameMenu = new GameMenuView();
-     gameMenu.displayMenu();
+     gameMenu.display();
          }
 
     private void startExistingGame() {
@@ -96,7 +67,7 @@ public class MainMenuView {
     private void displayHelpMenu() {
      
      HelpMenuView helpMenu = new HelpMenuView();
-     helpMenu.displayMenu();
+     helpMenu.display();
     }
 
     private void saveGame() {

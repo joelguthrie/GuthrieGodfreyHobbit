@@ -9,8 +9,9 @@ package cit260.hobbit.view;
  *
  * @author Bryant
  */
-class GameMenuView {
-     public static void display() {
-        System.out.println("\n ***** displayMenu stub function was here *******");
-    }
+public interface ViewInterface {
+
+    public void display();
+    public String getInput();
+    public boolean doAction(Object obj);
 }
