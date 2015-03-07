@@ -70,6 +70,6 @@ System.out.println("\n **** skills location stub called ******");      }
 
     private void goldLocation() {
 System.out.println("\n **** gold location stub called ******");      }
-    
-    
+
+      
 }
