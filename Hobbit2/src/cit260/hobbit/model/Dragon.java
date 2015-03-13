@@ -15,6 +15,16 @@ public class Dragon implements Serializable{
     private Float LifePoints;
     private String MathRiddles;
 
+    private DragonLocation dragonlocation;
+
+    public DragonLocation getDragonlocation() {
+        return dragonlocation;
+    }
+
+    public void setDragonlocation(DragonLocation dragonlocation) {
+        this.dragonlocation = dragonlocation;
+    }
+    
     public Dragon() {
     }
 

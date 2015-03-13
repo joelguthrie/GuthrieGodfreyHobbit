@@ -5,6 +5,9 @@
  */
 package cit260.hobbit.model;
 
+import java.util.ArrayList;
+import javafx.scene.Scene;
+
 /**
  *
  * @author Bryant
@@ -13,7 +16,46 @@ public class Location implements Serializable{
   
     //class instance variables 
     private boolean coordinates;
+    
+    private int row;
+    private int Column;
+    private boolean visited;
+    private ArrayList<Actor> actors;
+    private Scene scene;   
+    
+    public int getRow() {
+        return row;
+    }
 
+    public void setRow(int row) {
+        this.row = row;
+    }
+
+    public int getColumn() {
+        return Column;
+    }
+
+    public void setColumn(int col) {
+        this.Column = col;
+    }
+
+    public boolean isVisited() {
+        return visited;
+    }
+
+    public void setVisited(boolean visited) {
+        this.visited = visited;
+    }
+
+    public ArrayList<Actor> getActors() {
+        return actors;
+    }
+
+    public void setActors(ArrayList<Actor> actors) {
+        this.actors = actors;
+    } 
+ 
+    
     public Location() {
     }
     

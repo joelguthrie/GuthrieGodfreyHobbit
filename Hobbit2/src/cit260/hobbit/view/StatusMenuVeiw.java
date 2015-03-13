@@ -5,6 +5,7 @@
  */
 package cit260.hobbit.view;
 
+import cit260.hobbit.control.GameControl;
 import java.util.Scanner;
 
 /**
@@ -12,27 +13,24 @@ import java.util.Scanner;
  * @author joel
  */
 public class StatusMenuVeiw {
-    Integer gold = 0;
-    Integer goldpouch = 0;
-    Integer attackExperience = 0;
-    Integer defenseExperience = 0;
-    Integer experienceMedallion = 0;
-    Integer sword = 0;
-    Integer armor = 0;
-    
-    private final String Status = "\n"
-        +                  "\n***************************************************"
-        +                  "\n* Gold                                       "+ gold + "/10 *"
-        +                  "\n* Gold Pouch                                  "+ goldpouch + "/1 *"    
-        +                  "\n* Attack Experince                           "+ attackExperience + "/10 *"
-        +                  "\n* Defense Experince                          "+ defenseExperience + "/10 *"
-        +                  "\n* Experience Medallion                        "+ experienceMedallion + "/1 *"
-        +                  "\n* Sword                                       "+ sword + "/1 *"
-        +                  "\n* Armor                                       "+ armor + "/1 *"
-        +                  "\n*                                                 *"    
-        +                  "\n* Q - Quit                                        *"
-        +                  "\n***************************************************";
+
+    private void viewInventory(){
+        InventoryItem[] inventory = GameControl.getSortedInventoryList();
         
+        System.out.println("\nList of Inventory Items");
+        System.out.println("Descritption" + "\t" +
+                           "Required" + "\t" + 
+                           "In Stock");
+        
+        for (InventoryItem inventoryItem : inventory) {
+            
+            System.out.println(inventoryItem.getDescription() + "\t     "+
+                            inventoryItem.getRequiredAmount() + "\t     "+
+                            inventoryItem.getQuantityInStock());
+        }
+        
+    }
+    
         public void displayStatusMenu() {
         char selection = ' ';
         do {
@@ -77,4 +75,5 @@ public class StatusMenuVeiw {
                 break;
         }
     }
+
 }

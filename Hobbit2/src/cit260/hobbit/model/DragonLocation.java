@@ -17,6 +17,16 @@ public class DragonLocation implements Serializable{
     private float HobbitAttack;
     private Float TotalPoints;
 
+    private Dragon dragon;
+
+    public Dragon getDragon() {
+        return dragon;
+    }
+
+    public void setDragon(Dragon dragon) {
+        this.dragon = dragon;
+    }
+    
     public DragonLocation() {
     }
 

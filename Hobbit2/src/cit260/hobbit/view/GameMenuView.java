@@ -13,30 +13,28 @@ package cit260.hobbit.view;
     
       public GameMenuView(){
       super ( "\n"
-        +                  "\n****************************************************"
-        +                  "\n                                                   *"
-        +                  "\n                     Welcome                       *"
-        +                  "\n In order to complete your quest it will be        *"
-        +                  "\n necessay to explore this vast world. By traveling *"
-        +                  "\n to different location on the map, you will go     *"
-        +                  "\n around gathering the necessary resources to defeat*"
-        +                  "\n your foes.                                        *"
-        +                  "\n                                                   *"
-        +                  "\n Please select your map to continue your quest     *"
-        +                  "\n M - Map //needs to be created                     *"
-        +                  "\n****************************************************");
-  }
-      
+        +                  "\n***************************************************"
+        +                  "\n* D - Display Map                                 *"
+        +                  "\n* V - View Inventory                              *"
+        +                  "\n* Q - Quit the Help Menu                          *"
+        +                  "\n***************************************************");
+      }
     @Override
     public boolean doAction(Object obj) {
     char value = (char) obj;
     
-    value = Character.toUpperCase(value);
+   value = Character.toUpperCase(value);
         switch (value){
-           case 'M':
-                this.MapLocationView();
+
+            case 'D':
+                this.displayMap();
                 break;
-            
+            case 'V':
+                this.StatusMenu();
+                break;
+   
+            case 'Q':
+                return false;
             default:
                 System.out.println("\n **** Invalid Choice. Choose another ******");
                 break;
@@ -52,6 +50,10 @@ package cit260.hobbit.view;
 
     private void MapLocationView() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void displayMap() {
+        
     }
    
 

@@ -5,6 +5,8 @@
  */
 package cit260.hobbit.model;
 
+import hobbit2.Hobbit2;
+
 /**
  *
  * @author Bryant
@@ -16,10 +18,46 @@ public class Map implements Serializable{
     private float columnCount;
     private boolean instanceLocations;
 
+    private Game[] game;
+    private Location[][] locations;
+    private int noOfRows;
+    private int noOfColumns;
+   
+    public Game[] getGame() {
+        return game;
+    }
+
+    public void setGame(Game[] game) {
+        this.game = game;
+    }
+    
     public Map() {
     }
     
-    
+    public Map(int noOfRows, int noOfColumns){
+        if (noOfRows < 1 || noOfColumns < 1) {
+            System.out.println("The number of rows and columns must not be less than 0");
+             }
+        this.noOfRows = noOfRows;
+        this.noOfColumns = noOfColumns;
+        
+        this.locations = new Location[noOfRows][noOfColumns];
+        
+        
+        for(int row = 0; row < noOfRows; row++){
+            for(int Column = 0; Column < noOfColumns; Column++){
+                Location location = new Location();
+                location.setColumn(Column);
+                location.setRow(row);
+                location.setVisited(false);
+                
+                locations[row][Column] = location;
+                
+                
+            }
+        }
+        
+    }
 
     public float getRowCount() {
         return rowCount;
@@ -79,7 +117,57 @@ public class Map implements Serializable{
         }
         return true;
     }
+            public enum Scene{
+            Start,
+            Finish,
+            skills,
+            supplies,
+            dragon;
+        }
+    private static Scene[] createScenes() throws MapControlException{
+        Buffered image = null;
+        
+        Game game = Hobbit2.getCurrentGame();
+        Scene[] scenes = new Scene[SceneType.values().length];
+        
+        Scene startingScene = new Scene();
+        startingScene.setDescription(
+         "
+        +                  "\n****************************************************"
+        +                  "\n                                                   *"
+        +                  "\n                     Welcome                       *"
+        +                  "\n In order to complete your quest it will be        *"
+        +                  "\n necessay to explore this vast world. By traveling *"
+        +                  "\n to different location on the map, you will go     *"
+        +                  "\n around gathering the necessary resources to defeat*"
+        +                  "\n your foes.                                        *"
+        +                  "\n                                                   *"
+        +                  "\n Please select your map to continue your quest     *"
+        +                  "\n M - Map //needs to be created                     *"
+        +                  "\n****************************************************");
+  
+        startingScene.setMapSymbol(" ST ");
+        startingScene.setBlocked(false);
+        startingScene.setTravelTime(240);
+        scenes[SceneType.Start.ordinal()] = startingScene;
+        
+        Scene finishingScene = new Scene();
+        finishingScene.setDescription(
+         "So here we are at the end of our adventure. To the end we must go but is it the end, or merely a beginning?");
+        finishingScene.setMapSymbol(" ST ");
+        finishingScene.setBlocked(false);
+        finishingScene.setTravelTime(240);
+        scenes[SceneType.Finish.ordinal()] = finishingScene;
+        return null;
+        
+        
+    }
     
-    
+    private static void assignScenesToLocations(Map map, Scene[] scenes){
+        Location[][] locations = map.getLocations();
+        
+        locations[0][0].setScene(scenes[SceneType.Start.ordinal()]);
+        locations[9][9].setScene(scenes[SceneType.Finish.ordinal()]);
+    }
     
 }

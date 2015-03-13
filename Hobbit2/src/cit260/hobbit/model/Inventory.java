@@ -15,7 +15,25 @@ public class Inventory implements Serializable{
     private boolean inventoryType;
     private float quantityinStock;
     private float requiredAmount;
+        
+    public enum Item{
+            goldpouch,
+            ExperienceMedallion,
+            Gold,
+            Sword,
+            Shield;
+        }
+    
+    private Game game;
 
+    public Game getGame() {
+        return game;
+    }
+
+    public void setGame(Game game) {
+        this.game = game;
+    }
+    
     public Inventory() {
     }
     

@@ -5,7 +5,9 @@
  */
 package cit260.hobbit.model;
 
+import hobbit2.Hobbit2;
 import java.util.Objects;
+import javafx.scene.Scene;
 
 /**
  *
@@ -66,5 +68,6 @@ public class SceneLocation implements Serializable{
         return true;
     }
     
+
     
 }

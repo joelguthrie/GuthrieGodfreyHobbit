@@ -5,6 +5,7 @@
  */
 package cit260.hobbit.model;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
 /**
@@ -16,6 +17,45 @@ public class Game implements Serializable{
     //class instance variables
     private String totalTime;
 
+    private Player player;
+
+  
+    ArrayList<Actor> actor;
+    private Inventory inventory[];
+    private Map map;
+    
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+
+    public Map getMap() {
+        return map;
+    }
+
+    public void setMap(Map map) {
+        this.map = map;
+    }
+
+  public Inventory[] getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(Inventory[] inventory) {
+        this.inventory = inventory;
+    }
+
+    public ArrayList<Actor> getActor() {
+        return actor;
+    }
+
+    public void setActor(ArrayList<Actor> actor) {
+        this.actor = actor;
+    }
+   
     public Game() {
     }
 
