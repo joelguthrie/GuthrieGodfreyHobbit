@@ -9,7 +9,7 @@ package cit260.hobbit.model;
  *
  * @author Bryant
  */
-public class Inventory implements Serializable{
+public class InventoryItem implements Serializable{
     
     //class instance variables 
     private boolean inventoryType;
@@ -34,7 +34,7 @@ public class Inventory implements Serializable{
         this.game = game;
     }
     
-    public Inventory() {
+    public InventoryItem() {
     }
     
     
@@ -85,7 +85,7 @@ public class Inventory implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Inventory other = (Inventory) obj;
+        final InventoryItem other = (InventoryItem) obj;
         if (this.inventoryType != other.inventoryType) {
             return false;
         }

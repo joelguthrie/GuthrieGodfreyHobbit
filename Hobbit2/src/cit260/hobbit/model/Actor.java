@@ -21,6 +21,7 @@ public enum Actor implements Serializable{
        private final String description;
        private final Point coordinates; 
        
+       
        private Location[] location;
        private Game[] game;
 

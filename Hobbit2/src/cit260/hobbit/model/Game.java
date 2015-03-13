@@ -21,7 +21,7 @@ public class Game implements Serializable{
 
   
     ArrayList<Actor> actor;
-    private Inventory inventory[];
+    private InventoryItem[] inventory;
     private Map map;
     
     public Player getPlayer() {
@@ -40,11 +40,11 @@ public class Game implements Serializable{
         this.map = map;
     }
 
-  public Inventory[] getInventory() {
+  public InventoryItem[] getInventory() {
         return inventory;
     }
 
-    public void setInventory(Inventory[] inventory) {
+    public void setInventory(InventoryItem[] inventory) {
         this.inventory = inventory;
     }
 

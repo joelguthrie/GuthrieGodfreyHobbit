@@ -7,8 +7,8 @@ package cit260.hobbit.control;
 
 
 import cit260.hobbit.model.Game;
-import cit260.hobbit.model.Inventory;
-import cit260.hobbit.model.Inventory.Item;
+import cit260.hobbit.model.InventoryItem;
+import cit260.hobbit.model.InventoryItem.Item;
 import cit260.hobbit.model.Map;
 import cit260.hobbit.model.Player;
 import hobbit2.Hobbit2;
@@ -25,7 +25,7 @@ public class GameControl {
         
         game.setPlayer(player);
         
-        Inventory[] inventoryList = GameControl.createInventoryList();
+        InventoryItem[] inventoryList = GameControl.createInventoryList();
         game.setInventory(inventoryList);
         
         Map map = MapControl.createMap();
@@ -35,39 +35,39 @@ public class GameControl {
         
     }
 
-    public static Inventory[] createInventoryList() {
+    public static InventoryItem[] createInventoryList() {
           
        
         
-        Inventory[] inventory = 
-                  new Inventory[item.5];
+        InventoryItem[] inventory = 
+                  new InventoryItem[Item.5];
 
         
-          Inventory goldpouch = new Inventory();
+          InventoryItem goldpouch = new InventoryItem();
           goldpouch.setDescription("GoldPouch");
           goldpouch.setQuantityinStock(0);
           goldpouch.setRequiredAmount(0);
           inventory[Item.goldpouch.ordinal()] = goldpouch;
           
-          Inventory ExperienceMedallion = new Inventory();
+          InventoryItem ExperienceMedallion = new InventoryItem();
           ExperienceMedallion.setDescription("ExperienceMedallion");
           ExperienceMedallion.setQuantityinStock(0);
           ExperienceMedallion.setRequiredAmount(0);
           inventory[Item.ExperienceMedallion.ordinal()] = ExperienceMedallion;
           
-          Inventory Gold = new Inventory();
+          InventoryItem Gold = new InventoryItem();
           Gold.setDescription("Gold");
           Gold.setQuantityinStock(0);
           Gold.setRequiredAmount(0);
           inventory[Item.Gold.ordinal()] = Gold;
           
-          Inventory Sword = new Inventory();
+          InventoryItem Sword = new InventoryItem();
           Sword.setDescription("Sword");
           Sword.setQuantityinStock(0);
           Sword.setRequiredAmount(0);
           inventory[Item.Sword.ordinal()] = Sword;
           
-          Inventory Shield = new Inventory();
+          InventoryItem Shield = new InventoryItem();
           Shield.setDescription("Shield");
           Shield.setQuantityinStock(0);
           Shield.setRequiredAmount(0);
