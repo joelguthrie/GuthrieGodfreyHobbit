@@ -35,7 +35,7 @@ public class StatusMenuVeiw {
         public void displayStatusMenu() {
         char selection = ' ';
         do {
-            System.out.println(Status);
+            System.out.println(" ");
             
             String input = this.getInput();
             selection = input.charAt(0);

@@ -89,7 +89,7 @@ public class GameControl {
                for (int j = 0; j < inventoryList.length-1-i; j++ ){
                    if (inventoryList[j].getDescription().compareToIgnoreCase(inventoryList[j+1].getDescription()) > 0)
                    {
-                       tempInventoryItem = inventoryList[j];
+                       InventoryItem tempInventoryItem = inventoryList[j];
                        inventoryList[j] = inventoryList[j+1];
                        inventoryList[j+1] = tempInventoryItem;
                        
