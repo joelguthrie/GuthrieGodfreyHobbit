@@ -9,6 +9,7 @@ package cit260.hobbit.control;
 import cit260.hobbit.model.Game;
 import cit260.hobbit.model.InventoryItem;
 import cit260.hobbit.model.InventoryItem.Item;
+import cit260.hobbit.model.Location;
 import cit260.hobbit.model.Map;
 import cit260.hobbit.model.Player;
 import hobbit2.Hobbit2;
@@ -36,11 +37,12 @@ public class GameControl {
     }
 
     public static InventoryItem[] createInventoryList() {
+       
           
        
         
         InventoryItem[] inventory = 
-                  new InventoryItem[Item.5];
+                  new InventoryItem[InventoryItem.5];
 
         
           InventoryItem goldpouch = new InventoryItem();
@@ -96,6 +98,13 @@ public class GameControl {
            }
            
             return inventoryList;
+ 
         }
+            private static void assignScenesToLocations(Map map, Map.Scene[] scenes){
+        Location[][] locations = map.getLocations();
+        
+        locations[0][0].setScene(scenes[SceneType.Start.ordinal()]);
+        locations[9][9].setScene(scenes[SceneType.Finish.ordinal()]);
+    }
 }
 

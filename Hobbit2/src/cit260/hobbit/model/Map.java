@@ -130,9 +130,10 @@ public class Map implements Serializable{
         Game game = Hobbit2.getCurrentGame();
         Scene[] scenes = new Scene[SceneType.values().length];
         
-        Scene startingScene = new Scene();
+        Scene startingScene;
+        startingScene = 
         startingScene.setDescription(
-         "
+         ""
         +                  "\n****************************************************"
         +                  "\n                                                   *"
         +                  "\n                     Welcome                       *"

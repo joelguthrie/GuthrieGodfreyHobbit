@@ -20,6 +20,7 @@ public class MapControl {
     Scene[] scenes = createScenes();
     
     GameControl.assignScenesToLocations(map, scenes);
+      return null;
     
     
     }

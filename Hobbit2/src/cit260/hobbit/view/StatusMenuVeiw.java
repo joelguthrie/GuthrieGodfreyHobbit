@@ -6,6 +6,7 @@
 package cit260.hobbit.view;
 
 import cit260.hobbit.control.GameControl;
+import cit260.hobbit.model.InventoryItem;
 import java.util.Scanner;
 
 /**
@@ -14,7 +15,7 @@ import java.util.Scanner;
  */
 public class StatusMenuVeiw {
 
-    private void viewInventory(){
+    public void viewInventory(){
         InventoryItem[] inventory = GameControl.getSortedInventoryList();
         
         System.out.println("\nList of Inventory Items");
