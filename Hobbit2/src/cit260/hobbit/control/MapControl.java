@@ -28,6 +28,10 @@ public class MapControl {
     static void moveActorsToStartingLocation(Map map) {
   System.out.println("\n **** move actors function stub ******");      }
 
+    private static Scene[] createScenes() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 
     }
     

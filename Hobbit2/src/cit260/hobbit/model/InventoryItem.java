@@ -34,6 +34,9 @@ public class InventoryItem implements Serializable{
             Gold,
             Sword,
             Shield;
+            
+            Item(){
+            }
         }
     
     private Game game;

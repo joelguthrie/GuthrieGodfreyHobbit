@@ -11,8 +11,11 @@ import cit260.hobbit.model.InventoryItem;
 import cit260.hobbit.model.InventoryItem.Item;
 import cit260.hobbit.model.Location;
 import cit260.hobbit.model.Map;
+import static cit260.hobbit.model.Map.Scene.Finish;
+import static cit260.hobbit.model.Map.Scene.Start;
 import cit260.hobbit.model.Player;
 import hobbit2.Hobbit2;
+import javafx.scene.Scene;
 
 /**
  *
@@ -40,9 +43,7 @@ public class GameControl {
        
           
        
-        
-        InventoryItem[] inventory = 
-                  new InventoryItem[InventoryItem.5];
+        InventoryItem[] inventory = new InventoryItem[5];
 
         
           InventoryItem goldpouch = new InventoryItem();
@@ -103,8 +104,12 @@ public class GameControl {
             private static void assignScenesToLocations(Map map, Map.Scene[] scenes){
         Location[][] locations = map.getLocations();
         
-        locations[0][0].setScene(scenes[SceneType.Start.ordinal()]);
-        locations[9][9].setScene(scenes[SceneType.Finish.ordinal()]);
+        locations[0][0].setScene(scenes[Start.ordinal()]);
+        locations[9][9].setScene(scenes[Finish.ordinal()]);
+    }
+
+    static void assignScenesToLocations(Map map, Scene[] scenes) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
 

@@ -18,7 +18,7 @@ import cit260.hobbit.view.StartProgramView;
       super ( "\n"
         +                  "\n****************************************************"
         +                  "\n                                                   *"
-        +                  "\n             Welcome "+ playersName + "            *"
+        +                  "\n             Welcome           *"
         +                  "\n In order to complete your quest it will be        *"
         +                  "\n necessay to explore this vast world. By traveling *"
         +                  "\n to different location on the map, you will go     *"

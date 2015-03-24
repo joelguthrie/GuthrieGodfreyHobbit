@@ -117,6 +117,10 @@ public class Map implements Serializable{
         }
         return true;
     }
+
+    public Location[][] getLocations() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
             public enum Scene{
             Start,
             Finish,
