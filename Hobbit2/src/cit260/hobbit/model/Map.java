@@ -117,20 +117,39 @@ public class Map implements Serializable{
         }
         return true;
     }
+
+    public Location[][] getLocations() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
             public enum Scene{
             Start,
             Finish,
             skills,
             supplies,
             dragon;
+
+        private void setMapSymbol(String _st_) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        private void setBlocked(boolean b) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        private void setTravelTime(int i) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        private Scene setDescription(String string) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
         }
     private static Scene[] createScenes() throws MapControlException{
-        Buffered image = null;
-        
+  
         Game game = Hobbit2.getCurrentGame();
         Scene[] scenes = new Scene[SceneType.values().length];
         
-        Scene startingScene;
+        Scene startingScene = null;
         startingScene = 
         startingScene.setDescription(
          ""
@@ -152,7 +171,7 @@ public class Map implements Serializable{
         startingScene.setTravelTime(240);
         scenes[SceneType.Start.ordinal()] = startingScene;
         
-        Scene finishingScene = new Scene();
+        Scene finishingScene = null;
         finishingScene.setDescription(
          "So here we are at the end of our adventure. To the end we must go but is it the end, or merely a beginning?");
         finishingScene.setMapSymbol(" ST ");
