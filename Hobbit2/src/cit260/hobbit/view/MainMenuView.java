@@ -8,6 +8,7 @@ package cit260.hobbit.view;
 import cit260.hobbit.control.GameControl;
 import hobbit2.Hobbit2;
 
+
 /**
  *
  * @author Bryant
@@ -55,6 +56,10 @@ public class MainMenuView extends View {
 
     private void startNewGame() {
      GameControl.createNewGame(Hobbit2.getPlayer());
+     
+     BackStoryView backStory = new BackStoryView();
+     backStory.display();
+     
      
      GameMenuView gameMenu = new GameMenuView();
      gameMenu.display();
